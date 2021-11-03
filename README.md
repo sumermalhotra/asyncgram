@@ -48,7 +48,3 @@ client.stop()
 ```
 
 This is a toy example to get you started. Recommended usage would be to put relevant messages from some form of a websocket connection such that it's logged in an asynchronous way.
-
-# Donations
-
-If you liked this tool and would like to support me, kindly send your donations in ETH to 0xB08f9B316ddBCA4Dc5736153Cd63B8d9Bec46Bab

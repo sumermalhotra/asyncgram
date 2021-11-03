@@ -1,19 +1,16 @@
 import os
 import queue
-import dotenv
 import logging
 import requests
 import threading
 from time import sleep
 
-dotenv.load_dotenv()
-
 logging.basicConfig(level=logging.DEBUG, format='(%(threadName)-9s) %(message)s')
 
 class Asyncgram:
-    def __init__(self, poll_interval: float = 0.1, daemon: bool = True):
-        self.TG_TOKEN = os.environ.get("TG_TOKEN")
-        self.TG_GROUP = os.environ.get("TG_GROUP")
+    def __init__(self, tg_token: str, tg_group: str, poll_interval: float = 0.1, daemon: bool = True):
+        self.TG_TOKEN = tg_token
+        self.TG_GROUP = tg_group
         self.TG_URL = f"https://api.telegram.org/bot{self.TG_TOKEN}/sendMessage"
         self.POLL_INTERVAL = poll_interval
         self.daemon = daemon

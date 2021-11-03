@@ -1,1 +1,1 @@
-from src.asyncgram.client import Asyncgram
+from asyncgram.client import Asyncgram
